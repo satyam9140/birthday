@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ffdde1, #ee9ca7);
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 40px;
+            color: #ff3366;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .message {
+            font-size: 20px;
+            color: #444;
+            max-width: 100%;
+            margin: auto;
+            line-height: 1.6;
+            animation: fadeIn 3s ease-in-out;
+        }
+        .gallery {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .video-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        video {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #ff3366;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .btn:hover {
+            background: #cc0044;
+            transform: scale(1.05);
+        }
+        .surprise-message {
+            font-size: 20px;
+            color: white;
+            background: rgba(255, 51, 102, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+            margin-top: 20px;
+            animation: fadeInText 1.5s ease-in-out;
+            text-shadow: 0 0 10px #fff;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInText {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+            .message {
+                font-size: 18px;
+            }
+            .gallery img {
+                width: 80px;
+                height: 80px;
+            }
+            .btn {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+            .surprise-message {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday, My Love! ❤️</h1>
+        <p class="message">
+            Today is a special day because it's the day you were born. <br>
+            I am so grateful for every moment with you. You light up my world, <br>
+            and I can't wait to make more beautiful memories together. <br>
+            Enjoy your day, my love! 💖🎂🎉
+        </p>
+
+        <div class="gallery">
+            <img src="B4.jpg" alt="Memory 1">
+            <img src="B1.jpg" alt="Memory 2">
+            <img src="B2.jpg" alt="Memory 3">
+            <img src="B3.jpg" alt="Memory 4">
+        </div>
+
+        <div class="video-container">
+            <video controls>
+                <source src="satyam.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <button class="btn" onclick="showSurprise()">Click for a Surprise! 🎁</button>
+
+        <p id="surpriseMessage" class="surprise-message">
+            You are the most wonderful person in my life! I love you more than words can say! 💖
+        </p>
+    </div>
+
+    <audio id="birthdayMusic" loop>
+        <source src="phir-aur-kya-chahiye-asees-version-zara-hatke-zara-bachke-128-kbps_SKRAR7wu.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        document.addEventListener("click", function() {
+            let audio = document.getElementById("birthdayMusic");
+            audio.play();
+        }, { once: true });
+
+        function showSurprise() {
+            document.getElementById('surpriseMessage').style.display = 'block';
+            document.getElementById('birthdayMusic').play();
+        }
+    </script>
+</body>
+</html>
